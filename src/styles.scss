@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ravi+Prakash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+*{
+  background: #2b7986;
+}
+a{
+  color:white;
+  text-decoration: none;
+  &:hover h3{
+    color:black;
+  }
+}
+.App {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .title{
+    font-size: 4rem;
+    color: rgb(240, 198, 14);
+    font-family: 'Ravi Prakash', cursive;
+    margin:0;
+    
+  }
+
+  .calculator{ 
+      margin-bottom: 20px;
+      max-width:400px;
+      width:50%;
+      display: flex;
+      flex-wrap:wrap;
+      
+      .screen{
+        background: white;
+        height:80px;
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width:100%;
+        font-size:2.5rem;
+        span{
+          background: white;
+          text-align: right;
+          font-family: 'Electrolize', sans-serif;
+        }
+      }
+      .keypad{
+        padding-top:10px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: rgb(147, 74, 196);
+        color:#2b7986;
+        width:100%;
+        .keypad-row{
+          width:100%;
+          display: inline-flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 4px;
+          background: rgb(147, 74, 196);
+          :not(:last-child){
+            margin-right:2px;
+          }
+        .key{
+          cursor: pointer;
+          width:25%;
+          font-size:2rem; 
+          font-family: 'Ravi Prakash', cursive;
+          font-weight: bolder;
+          background: white;
+          padding:15px 0;
+          border-radius: 0%;
+          &:hover{
+            background: rgb(245, 65, 65);
+            color:white;
+          }
+          &.ac{
+            width:75%;
+            background: rgb(245, 65, 65);
+            color:black;
+            &:hover{
+              background: rgb(240, 198, 14);
+              color:rgb(245, 65, 65);
+            }
+          }
+          &.equals{
+            background: rgb(240, 198, 14);
+            color:black;
+            width:50%;
+            &:hover{
+              color: white;
+              background:rgb(245, 65, 65);
+            }
+          }
+      }
+    }
+      }
+  }
+}
+@media(max-width:750px){
+  .App{
+    .calculator{
+      max-width: auto;
+      width:100%;
+    }
+  }
+}
